@@ -2,10 +2,12 @@
 
 Team:
 
-* Person 1 - Which microservice?
-* Person 2 - Which microservice?
+* Damien Camel - Hats
+* Justin Leopard - Shoes
 
 ## Design
+Bootstrap, using Fearless Frontend Simplicity
+Goal is to get to the end
 
 ## Shoes microservice
 
