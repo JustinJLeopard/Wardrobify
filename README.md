@@ -6,10 +6,7 @@ Team:
 * Justin Leopard - Shoes
 
 ## Design
-Bootstrap, using Fearless Frontend Simplicity
-Goal is to get to the end
-
-asdfjfkjsdfkjsdjfsdjfdsjkfk
+Testing again
 
 ## Shoes microservice
 
