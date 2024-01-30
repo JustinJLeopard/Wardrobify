@@ -34,8 +34,6 @@ ALLOWED_HOSTS = ["wardrobe-api", 'localhost']
 INSTALLED_APPS = [
     "corsheaders",
     "wardrobe_api.apps.WardrobeApiConfig",
-    "hats.apps.HatsConfig"
-    "shoes.apps.ShoesConfig"
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,7 +58,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000", "http://localhost:8090", "http://localhost:8080", "http://localhost:8100"
+    "http://localhost:3000",
 ]
 CORS_ALLOW_CREDENTIALS = True
 
