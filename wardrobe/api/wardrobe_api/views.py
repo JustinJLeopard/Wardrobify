@@ -65,6 +65,7 @@ def api_locations(request):
             encoder=LocationEncoder,
         )
     else:
+        print(request.body)
         content = json.loads(request.body)
         location = Location.objects.create(**content)
         return JsonResponse(
