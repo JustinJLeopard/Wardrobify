@@ -9,9 +9,9 @@ sys.path.append("")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hats_project.settings")
 django.setup()
 
-# Import models from hats_rest, here.
-# from hats_rest.models import Something
+
 from hats_rest.models import LocationVO
+
 
 def get_locations():
     # http://wardrobe-api:8000
@@ -28,6 +28,7 @@ def get_locations():
     else:
         print(f"Failed to fetch locations: {response.status_code}")
 
+
 def poll():
     while True:
         print('Hats poller polling for data')
@@ -36,7 +37,7 @@ def poll():
             get_locations()
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(10)
+        time.sleep(60)
 
 
 if __name__ == "__main__":

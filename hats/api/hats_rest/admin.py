@@ -6,6 +6,7 @@ from .models import LocationVO, Hat
 class LocationVOAdmin(admin.ModelAdmin):
     list_display = ('id', 'import_href', 'closet_name')
 
+
 @admin.register(Hat)
 class HatAdmin(admin.ModelAdmin):
     pass

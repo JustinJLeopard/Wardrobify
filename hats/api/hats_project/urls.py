@@ -15,15 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# from hats_rest.views import api_list_hats
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("hats_rest.urls")),
-    # path(
-    #     "locations/<int:location_vo_id>/hats/",
-    #     api_list_hats,
-    #     name="api_list_hats",
-    # ),
-    # path("hats/<int:pk>/", api_show_hat, name="api_show_hats"),
 ]
