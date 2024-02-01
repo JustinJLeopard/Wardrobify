@@ -4,12 +4,12 @@ import Nav from './Nav';
 import MainPage from './MainPage';
 import ShoesList from './ShoesList';
 import ShoeForm from './ShoeForm';
-import HatsList from './HatsList';  // Import the HatsList component
-import HatForm from './HatForm';    // Import the HatForm component
-// import BinList from './BinList';
-// import BinForm from './BinForm';
-// import LocationList from './LocationList';
-// import LocationForm from './LocationForm';
+import HatsList from './HatsList';
+import HatForm from './HatForm';
+import BinList from './BinList';
+import BinForm from './BinForm';
+import LocationList from './LocationList';
+import LocationForm from './LocationForm';
 
 
 function App() {
@@ -21,8 +21,12 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/shoes" element={<ShoesList />} />
           <Route path="/shoes/new" element={<ShoeForm />} />
-          <Route path="/hats" element={<HatsList />} />    // Add route for listing hats
-          <Route path="/hats/new" element={<HatForm />} /> // Add route for adding a new hat
+          <Route path="/hats" element={<HatsList />} />
+          <Route path="/hats/new" element={<HatForm />} />
+          <Route path="/hats" element={<BinList />} />
+          <Route path="/hats/new" element={<BinForm />} />
+          <Route path="/locations" element={<LocationList />} />
+          <Route path="/locations/new" element={<LocationForm />} />
         </Routes>
       </div>
     </BrowserRouter>

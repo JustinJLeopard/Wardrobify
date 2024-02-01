@@ -11,10 +11,22 @@ function Nav() {
               <NavLink className="nav-link" to="/">Home</NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/bins/">List Bins</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/bins/new">Create Bin</NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/shoes">List Shoes</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/shoes/new">Create Shoes</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/locations/">List Locations</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/locations/new">Create Location</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/hats">List Hats</NavLink>
