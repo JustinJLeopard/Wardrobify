@@ -2,7 +2,7 @@ from django.views.decorators.http import require_http_methods
 from .models import Shoe, BinVO
 from common.json import ModelEncoder
 import json
-from django.http import JsonResponse, HttpResponse, Http404
+from django.http import JsonResponse, Http404
 
 
 class BinVODetailEncoder(ModelEncoder):
