@@ -6,6 +6,11 @@ import ShoesList from './ShoesList';
 import ShoeForm from './ShoeForm';
 import HatsList from './HatsList';  // Import the HatsList component
 import HatForm from './HatForm';    // Import the HatForm component
+// import BinList from './BinList';
+// import BinForm from './BinForm';
+// import LocationList from './LocationList';
+// import LocationForm from './LocationForm';
+
 
 function App() {
   return (
