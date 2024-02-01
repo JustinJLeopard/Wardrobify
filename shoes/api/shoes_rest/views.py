@@ -90,8 +90,8 @@ def api_show_shoe(request, pk):
         )
 
     elif request.method == "DELETE":
-        shoe.delete()
-        return HttpResponse(status=204)
+        count, _ = Shoe.objects.filter(id=pk).delete()
+        return JsonResponse({"deleted": count > 0})
 
 
 
