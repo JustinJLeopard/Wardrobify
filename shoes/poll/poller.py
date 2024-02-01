@@ -9,18 +9,29 @@ sys.path.append("")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "shoes_project.settings")
 django.setup()
 
-# Import models from shoes_rest, here.
-# from shoes_rest.models import Something
+from shoes_rest.models import BinVO
 
 def poll():
     while True:
         print('Shoes poller polling for data')
         try:
-            # Write your polling logic, here
-            pass
+            response = requests.get('http://wardrobe-api:8000/api/bins/')
+            response.raise_for_status()
+            bins_data = response.json()
+
+            for bin_data in bins_data['bins']:
+                bin_vo, created = BinVO.objects.update_or_create(
+                    import_href=bin_data['href'],
+                    defaults={'name': bin_data['closet_name']}
+                )
+                if created:
+                    print(f'Created new BinVO: {bin_vo.name}')
+                else:
+                    print(f'Updated BinVO: {bin_vo.name}')
+
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(60)
+        time.sleep(5)
 
 
 if __name__ == "__main__":
