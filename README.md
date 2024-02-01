@@ -5,9 +5,10 @@ Team:
 * Damien Camel - Hats
 * Justin Leopard - Shoes
 
+dddddddd
+
 ## Design
-Bootstrap, using Fearless Frontend Simplicity
-Goal is to get to the end
+Bootstrap, following Fearless styling.
 
 ## Shoes microservice
 
