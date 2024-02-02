@@ -18,14 +18,6 @@ function LocationList() {
     getData()
   }, []);
 
-  const handleDelete = (locationId) => {
-    fetch(`/api/locations/${locationId}/`, { method: 'DELETE' })  // Adjust the endpoint as needed
-      .then(() => {
-        setLocations(locations.filter(location => location.id !== locationId));
-      })
-      .catch(error => console.error('Error deleting location:', error));
-  };
-
   return (
     <div className="my-5 container">
       <div className="row">
@@ -35,6 +27,8 @@ function LocationList() {
             <tr>
               <th>Id</th>
               <th>Closet Name</th>
+              <th>Section Number</th>
+              <th>Shelf Number</th>
             </tr>
           </thead>
           <tbody>
@@ -43,7 +37,8 @@ function LocationList() {
                 <tr key={location.href}>
                   <td>{ location.id }</td>
                   <td>{ location.closet_name }</td>
-                  <td><button onClick={() => handleDelete(location.id)}>Delete</button></td>
+                  <td>{ location.section_number }</td>
+                  <td>{ location.shelf_number }</td>
                 </tr>
               );
             })}

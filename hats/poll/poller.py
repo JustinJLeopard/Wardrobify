@@ -14,12 +14,9 @@ from hats_rest.models import LocationVO
 
 
 def get_locations():
-    # http://wardrobe-api:8000
     response = requests.get("http://wardrobe-api:8000/api/locations/")
-    print("response line:", response)
     if response.status_code == 200:
         content = json.loads(response.content)
-        print("content line:", content)
         for location in content["locations"]:
             LocationVO.objects.update_or_create(
                 import_href=location["href"],
@@ -37,7 +34,7 @@ def poll():
             get_locations()
         except Exception as e:
             print(e, file=sys.stderr)
-        time.sleep(60)
+        time.sleep(10)
 
 
 if __name__ == "__main__":

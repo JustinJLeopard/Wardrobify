@@ -5,7 +5,7 @@ Team:
 * Justin Leopard - Shoes
 
 ## Design
-Bootstrap, following Fearless styling.
+Bootstrap, following Fearless Conference Go styling.
 
 ## Shoes microservice
 
@@ -36,4 +36,4 @@ is maintained through the use of the poller.
 
 The Hat's poller is set to automatically synch the
 LocationVO's list to match the entries of Wardrobe's
-Location Model.  
+Location Model.

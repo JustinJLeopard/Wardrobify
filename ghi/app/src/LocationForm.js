@@ -65,9 +65,9 @@ function LocationForm() {
           <div className="card shadow">
             <div className="card-body">
               <form className={formClasses} onSubmit={handleSubmit} id="create-location-form">
-                <h1 className="card-title">Choose a Location</h1>
+                <h1 className="card-title">Create a Location</h1>
                 <p className="mb-3">
-                  Please enter the hat details.
+                  Please enter the location details.
                 </p>
                 <div className="row">
                   <div className="row">

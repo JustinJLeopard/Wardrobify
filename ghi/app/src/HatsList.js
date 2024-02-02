@@ -19,7 +19,7 @@ function HatsList() {
   }, []);
 
   const handleDelete = (hatId) => {
-    fetch(`/api/hats/${hatId}/`, { method: 'DELETE' })  // Adjust the endpoint as needed
+    fetch(`/api/hats/${hatId}/`, { method: 'DELETE' })
       .then(() => {
         setHats(hats.filter(hat => hat.id !== hatId));
       })
@@ -34,6 +34,10 @@ function HatsList() {
           <thead>
             <tr>
               <th>Name</th>
+              <th>Fabric</th>
+              <th>Style Name</th>
+              <th>Color</th>
+              <th>Picture URL</th>
               <th>Location</th>
             </tr>
           </thead>
@@ -42,6 +46,10 @@ function HatsList() {
               return (
                 <tr key={hat.href}>
                   <td>{ hat.name }</td>
+                  <td>{ hat.fabric }</td>
+                  <td>{ hat.style_name }</td>
+                  <td>{ hat.color }</td>
+                  <td>{ hat.pic_url }</td>
                   <td>{ hat.location }</td>
                   <td><button onClick={() => handleDelete(hat.id)}>Delete</button></td>
                 </tr>

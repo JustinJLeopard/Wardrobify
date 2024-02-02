@@ -12,7 +12,13 @@ class LocationVODetailEncoder(ModelEncoder):
 
 class HatListEncoder(ModelEncoder):
     model = Hat
-    properties = ["name", "id"]
+    properties = [
+        "name",
+        "fabric",
+        "style_name",
+        "color",
+        "pic_url",
+        "id"]
 
     def get_extra_data(self, o):
         return {"location": o.location.closet_name}
@@ -45,12 +51,9 @@ def api_list_hats(request, location_vo_id=None):
             encoder=HatListEncoder,
         )
     else:
-        print("Starting POST request", request.body)
         content = json.loads(request.body)
-        print("Prased content:", content)
         try:
             location_href = content["location"]
-            print("Location href:", location_href)
             location = LocationVO.objects.get(import_href=location_href)
             content["location"] = location
         except LocationVO.DoesNotExist:
