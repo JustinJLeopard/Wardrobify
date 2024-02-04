@@ -12,10 +12,16 @@ class BinVODetailEncoder(ModelEncoder):
 
 class ShoeListEncoder(ModelEncoder):
     model = Shoe
-    properties = ["model_name"]
+    properties = [
+        "manufacturer",
+        "model_name",
+        "color",
+        "picture_url",
+        "id"
+    ]
 
     def get_extra_data(self, o):
-        return {"shoe": o.model_name}
+        return {"bin": o.bin.name}
 
 
 class ShoeDetailEncoder(ModelEncoder):

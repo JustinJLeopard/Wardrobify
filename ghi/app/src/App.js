@@ -23,8 +23,8 @@ function App() {
           <Route path="/shoes/new" element={<ShoeForm />} />
           <Route path="/hats" element={<HatsList />} />
           <Route path="/hats/new" element={<HatForm />} />
-          <Route path="/hats" element={<BinList />} />
-          <Route path="/hats/new" element={<BinForm />} />
+          <Route path="/bins" element={<BinList />} />
+          <Route path="/bins/new" element={<BinForm />} />
           <Route path="/locations" element={<LocationList />} />
           <Route path="/locations/new" element={<LocationForm />} />
         </Routes>

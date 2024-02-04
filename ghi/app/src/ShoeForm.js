@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+
+
 function ShoeForm() {
   const [bin, setBin] = useState('');
   const [model_name, setModel_Name] = useState('');
@@ -15,9 +17,11 @@ function ShoeForm() {
       setBins(data.bins);
     }
   }
+
   useEffect(() => {
     fetchData();
   }, []);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = {};
@@ -44,6 +48,7 @@ function ShoeForm() {
           setHasCreated(true);
     }
   }
+
   const handleChangeBin = (event) => {
     const value = event.target.value;
     setBin(value);
@@ -64,6 +69,7 @@ function ShoeForm() {
     const value = event.target.value;
     setPicture_Url(value);
   }
+  
   // CSS classes for rendering
   let spinnerClasses = 'd-flex justify-content-center mb-3';
   let dropdownClasses = 'form-select d-none';
@@ -149,5 +155,4 @@ function ShoeForm() {
     </div>
   );
 }
-
 export default ShoeForm;
